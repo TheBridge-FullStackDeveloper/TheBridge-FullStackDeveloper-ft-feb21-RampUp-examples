@@ -1,3 +1,36 @@
 body{
-    background-color: blanchedalmond;
+    background-color: #F0F3F5;
 }
+
+table, th, td {
+    border:1px dashed #7B2D26;
+}
+
+/*Selector de clase*/
+.song {
+    background-color: #D7C9AA; 
+}
+.song:hover {
+    background-color: #0B7A75;
+    color:#F0F3F5;
+}
+
+.video{
+    width:320px; 
+    height:240px; 
+}
+
+.center{
+    text-align: center;
+}
+
+/*Selector de ID*/
+#songs{
+    width:100%;
+}
+
+#rock-img-header{
+    width:30%;
+}
+
+
