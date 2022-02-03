@@ -1,5 +1,7 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    scroll-margin-top: 70px;
 }
 
 body{
@@ -27,6 +29,15 @@ h2 {
     background-color: #0B7A75;
     color: #F0F3F5;
 }
+
+header{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    background-color: #19535F;  
+}
+
 input[type=text],input[type=email],input[type=submit]{
     width:100%;
     margin: 8px 0px;
@@ -54,12 +65,16 @@ nav > ul > li{
 }
 nav > ul > li > a {
     text-decoration: none;
-    color:#19535F;
+    color:#F0F3F5;
 }
 
 form > h5 {
     margin: 8px 0px 8px;
 }
+
+/* section {
+    padding-top:45px;
+} */
 
 /*Selector de clase*/
 .song {
@@ -79,6 +94,19 @@ form > h5 {
     text-align: center;
 }
 
+div.top {
+    position: fixed;
+    bottom: 0;
+    right: 8px;
+    background-color: #19535F;
+    font-size:20px;
+}
+
+div.top > a {
+    color:#F0F3F5;
+    text-decoration: none;
+}
+
 /*Selector de ID*/
 #songs{
     width:100%;
@@ -87,5 +115,4 @@ form > h5 {
 #rock-img-header{
     width:30%;
 }
-
 
