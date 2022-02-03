@@ -1,0 +1,31 @@
+/* flexbox stuff in about page */
+.wrapContainer {
+    min-width: 530px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #a9ffac;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 15px;
+}
+
+.aboutText {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 2%;
+    margin-right: 2%;
+}
+
+.ramen {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+}
