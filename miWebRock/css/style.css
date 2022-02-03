@@ -116,3 +116,27 @@ div.top > a {
     width:30%;
 }
 
+@media only screen and (min-width: 768px){
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    input[type=submit]{
+        width: 25%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    label{
+        padding: 1px;
+    }
+
+    .check{
+        display: flex;
+    }
+
+}
