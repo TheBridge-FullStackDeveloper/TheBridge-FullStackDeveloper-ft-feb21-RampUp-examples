@@ -73,6 +73,13 @@ form > h5 {
     margin: 8px 0px 8px;
 }
 
+footer{
+    background-color: #19535F;
+    color:#F0F3F5;
+    text-align: center;
+    bottom: 0;
+}
+
 /* section {
     padding-top:45px;
 } */
@@ -165,7 +172,7 @@ div.top > a {
 }
 
 #rock-img-header{
-    width:30%;
+    width:100%;
 }
 
 @media only screen and (min-width: 768px){
@@ -193,6 +200,10 @@ div.top > a {
 
     .map{
         width: 50%;
+    }
+
+    #rock-img-header{
+        width:50%;
     }
 
 }
