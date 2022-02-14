@@ -42,7 +42,11 @@ document.getElementById("btn1").addEventListener('click',function(){
 
 })
 
-document.getElementById("btn2").addEventListener('click',function(){
+// Al elemento del DOM se le asocia un listener del evento "click", y se lanza una función de callback (anónima) con la tarea a realizar
+document.getElementById("btn2").addEventListener('click',function(event){
+
+    console.log(event.target);
+    console.log(event.type); //click
 
     let lista = document.getElementById("result2");
     
@@ -74,5 +78,69 @@ console.log(document.querySelectorAll('ul#lista > li.item'))
 console.log(document.querySelectorAll('.item'))
 console.log(document.querySelectorAll('p'))
 console.log(document.querySelectorAll('p.claseP'))
+
+
+
+
+// Crear elementos en el DOM desde JS
+//  Crea ---> <li>This is new</li>
+let newLi = document.createElement("li");
+let txt = document.createTextNode("This is new.");
+newLi.className="item";
+newLi.appendChild(txt);
+
+document.getElementById("lista").appendChild(newLi);
+
+// Reemplazar
+
+const parent = document.getElementById("lista"); // padre
+
+let newLi2 = document.createElement("li");
+let txt2 = document.createTextNode("Este es el reemplazado");
+newLi2.appendChild(txt2); // nuevo elemento
+
+let child = document.querySelectorAll("ul > li")[1]; // hijo a cambiar
+
+parent.replaceChild(newLi2, child); 
+
+
+
+
+
+
+
+
+// Cambiar estilos
+console.log(" %c****Cambiar estilos****" , style);
+
+// Para cambiar los estilos del item
+const cambiarEstilosItems = (event)=> {
+    console.log(event.type);
+    console.log(event.target);
+    event.target.classList.toggle("item_selected");
+
+}
+
+const resetEstilosItems = (event)=> {
+    event.target.classList.toggle("item_selected");
+}
+
+// devuelve todos los  elementos .item
+let items = document.getElementsByClassName("item"); 
+// document.querySelectorAll(".item"); 
+
+
+
+// A todos los elemento DOM .item se le asocia un listener del evento "click", y se lanza una función de callback (NO anónima) con la tarea a realizar
+
+for (let i = 0; i < items.length; i++) {
+    items[i].addEventListener("mouseover",cambiarEstilosItems);  
+    items[i].addEventListener("mouseout",resetEstilosItems);  
+}
+
+
+
+
+
 
 

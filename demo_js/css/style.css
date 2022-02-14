@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(160, 246, 218);
+}
+
+.item {
+    color:white;
+    background-color: black;
+}
+
+.item_selected {
+    color: black;
+    background-color: white;
+}
