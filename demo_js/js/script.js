@@ -139,6 +139,35 @@ for (let i = 0; i < items.length; i++) {
 }
 
 
+// Validación de formularios
+//document.querySelector("#form_rock") // si usara el ID
+document.querySelector("form[name='form_rock']").addEventListener('submit',function(event){
+    // Dr strange
+    event.preventDefault(); // Frena el envío de formulario
+    console.log(event.target.fname.value);
+    console.log(event.target.accept.checked);
+
+    const fname = event.target.fname.value;
+    const lname = event.target.lname.value;
+    const email = event.target.email.value;
+    
+    const checked = event.target.accept.checked;
+
+
+    if(!checked){
+        alert("Debe aceptar las condiciones de uso");
+    }
+    else if(fname.trim()!="" && lname.trim()!="" && email!="" && email.endsWith(".com")){
+        alert("datos super correctos");
+        // Se reanuda el envío del formulario
+        // event.target.submit(); // Cuando enviemos el formulario "de verdad"
+    }else{
+        alert("datos incorrectos");
+    }
+
+})
+
+
 
 
 
